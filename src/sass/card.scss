@@ -24,9 +24,18 @@
       margin-left: 2%;
     }
 
-    &.theatre-img {
+    &.theatre-img,
+    &.explore-img {
       height: auto;
       width: 90%;
+    }
+
+    &.explore-img-small {
+      height: 120px;
+    }
+
+    &.explore-img-xsmall {
+      height: 100px;
     }
   }
 
@@ -60,17 +69,27 @@
     }
 
     &.cooking-text,
-    &.theatre-text {
+    &.theatre-text,
+    &.explore-text {
       color: $black;
       margin: 1rem 0;
       line-height: 1.4;
       font-size: .6rem;
     }
 
-    &.theatre-text {
+    &.theatre-text,
+    &.explore-text {
       color: $white;
       font-size: .5rem;
       width: 88%;
+    }
+
+    &.explore-text {
+      width: 93%;
+    }
+
+    &.explore-text-small {
+      font-size: .43rem;
     }
   }
 }

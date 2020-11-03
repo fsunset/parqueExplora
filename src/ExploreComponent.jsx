@@ -67,9 +67,10 @@ const ExploreComponent = () => {
                 image={exploreImg1}
                 text="Usaremos elementos caseros para hacer experiencias sobre electrostática de una manera divertida
                 y segura. Veremos cuáles materiales se atraen o repelen entre sí, y que inclusive podemos usar la electrostática para hacer volar un objeto."
-                cssTitle="mb-2"
+                cssTitle="mb-2 text-center"
                 cssImg="explore-img"
                 cssText="explore-text"
+                cssClass=" pl-2"
               />
 
               <div className="hours">
@@ -82,16 +83,33 @@ const ExploreComponent = () => {
           <div className="col-3 folder-container">
             <div className="bg-container">
               <CardComponent
-                title="taller Dibujo de pirañas"
+                title="Taller magia y ciencia"
                 image={exploreImg2}
-                text="En nuestro taller de dibujo exploraremos el mundo de las pirañas. Y por medio de la biología,
-                veremos su ciclo de alimentación, reproducción, morfología y comportamiento. Dibujaremos una piraña con un método de ilustración científica."
-                cssClass=" second"
+                text="Somos lo que percibimos… los magos conocen muy bien como funcionan nuestros sentidos para engañarnos y distorsionar la realidad.
+                Te invitamos a nuestro taller “Magia en Casa”, donde aprenderás con materiales caseros y conocerás como conectamos la magia y la ciencia."
+                cssTitle=" text-center"
+                cssImg="explore-img-xsmall"
+                cssText="explore-text my-1 explore-text-small"
               />
 
               <div className="hours">
+                <strong>Inscríbete aquí</strong>
                 <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
-                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
+              </div>
+
+              <CardComponent
+                title="Maestros del disfraz"
+                image={exploreImg3}
+                text="¿Sabías que los animales son maestros del disfraz? Las pirañas se visten de lentejuelas, las ranas se vuelven multicolor, las orquídeas se disfrazan de abejas…
+                En esta charla hablaremos de los disfraces a los que recurren los animales para sobrevivir, comer o atraerse entre sí."
+                cssText="explore-text my-1 explore-text-small"
+                cssImg="explore-img-xsmall"
+                cssTitle=" text-center"
+              />
+
+              <div className="hours">
+                <strong>Inscríbete aquí</strong>
+                <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
               </div>
             </div>
           </div>
@@ -99,15 +117,31 @@ const ExploreComponent = () => {
           <div className="col-3 folder-container">
             <div className="bg-container">
               <CardComponent
-                title="navegación por Amazonas "
-                image={exploreImg3}
-                text="Sumergete al interior del Acuario Parque Explora y conoce las especies representativas del Amazonas.
-                Una experiencia única donde conocerás al Pirarucú, un gigante prehistórico considerado uno de los peces de agua dulce mas grande del mundo."
-                cssClass=" second"
+                title="TALLER DE química y magia"
+                image={exploreImg4}
+                text="Ven con nosotros a descubrir el universo de las reacciones químicas y te enseñaremos algunos trucos:
+                ¿Cómo inflar un globo mezclando dos sustancias de la cocina?"
+                cssText="explore-text my-1 explore-text-small"
+                cssTitle=" text-center"
+                cssImg="explore-img-xsmall"
               />
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
+                <span onClick={() => setModalClassShow(true)}>12pm - 1pm</span>
+                <span onClick={() => setModalClassShow(true)}>5pm - 6pm</span>
+              </div>
+
+              <CardComponent
+                title="Taller de experimentación química"
+                image={exploreImg5}
+                text="Experimentamos con la química y la física para ver fenómenos únicos de la ciencia, maravíllate con estos trucos."
+                cssText="explore-text my-1 explore-text-small"
+                cssImg="explore-img-xsmall"
+                cssTitle=" text-center"
+              />
+
+              <div className="hours">
+                <strong>Inscríbete aquí</strong>
                 <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
               </div>
             </div>
@@ -120,20 +154,29 @@ const ExploreComponent = () => {
                 image={exploreImg6}
                 text="Hacemos cosas, cada uno a nuestro ritmo. Creamos, construimos, jugamos. Solos y con el otro.
                 Hacemos para nosotros, también para compartir. En la mínima acción de vivir nos relacionamos con el mundo."
+                cssText="explore-text my-1 explore-text-small"
+                cssTitle=" text-center"
+                cssImg="explore-img-small"
               />
 
-              <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>clic aquí</span>
+              <div className="hours" style={{ marginTop: "-10px", marginBottom: "5px" }}>
+                <a href="https://encasa.parqueexplora.org/experimenta/" target="_blank" rel="noreferrer">
+                  <span>clic aquí</span>
+                </a>
               </div>
 
               <CardComponent
                 title=""
                 image={exploreImg7}
                 text="Interactúa con Experiencias de Parque Explora desde la comodidad de tu casa."
+                cssText="explore-text my-1 explore-text-small"
+                cssImg="explore-img-small"
               />
 
-              <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>clic aquí</span>
+              <div className="hours" style={{marginTop: "-10px", marginBottom: "5px"}}>
+                <a href="https://encasa.parqueexplora.org/experimenta/" target="_blank" rel="noreferrer">
+                  <span>clic aquí</span>
+                </a>
               </div>
             </div>
           </div>

@@ -74,10 +74,11 @@
         font-size: .6rem;
       }
 
+      > a span,
       > span {
         background: $grey;
         color: white;
-        font-size: .65rem;
+        font-size: .5rem;
         margin: 10px 5px;
         padding: 8px 10px;
         border-radius: 20px;
