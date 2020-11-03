@@ -9,6 +9,7 @@ import UniverseComponent from "./UniverseComponent";
 import DinoComponent from "./DinoComponent";
 import WaterComponent from "./WaterComponent";
 import CookingComponent from "./CookingComponent";
+import TheatreComponent from "./TheatreComponent";
 
 import './sass/home.scss';
 
@@ -16,6 +17,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/explora-teatro">
+          <TheatreComponent />
+        </Route>
         <Route path="/explora-sabores">
           <CookingComponent />
         </Route>

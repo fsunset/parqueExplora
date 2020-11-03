@@ -23,6 +23,11 @@
       width: 92%;
       margin-left: 2%;
     }
+
+    &.theatre-img {
+      height: auto;
+      width: 90%;
+    }
   }
 
   &.second,
@@ -54,11 +59,18 @@
       margin: 8px 15px;
     }
 
-    &.cooking-text {
+    &.cooking-text,
+    &.theatre-text {
       color: $black;
       margin: 1rem 0;
       line-height: 1.4;
       font-size: .6rem;
+    }
+
+    &.theatre-text {
+      color: $white;
+      font-size: .5rem;
+      width: 88%;
     }
   }
 }
