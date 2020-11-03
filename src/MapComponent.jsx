@@ -39,7 +39,7 @@ const MapComponent = () => {
       </div>
       <div
         className="main__map-cooking"
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/explora-sabores")}
       >
       </div>
     </div>

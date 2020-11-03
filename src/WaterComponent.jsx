@@ -79,7 +79,7 @@ const WaterComponent = () => {
 
           <div className="col-7 text-center">
             <div className="main__water-title">
-              <p>Explora <br />waterSAURIOS</p>
+              <p>Explora <br />bajo el agua</p>
             </div>
           </div>
 

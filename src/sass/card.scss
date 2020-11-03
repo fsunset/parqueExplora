@@ -1,22 +1,11 @@
+@import "./main.scss";
+
 .custom__card {
   padding: 0rem 0rem 0rem .75rem;
 
   .custom__card__title {
     font-size: .67rem;
     text-transform: uppercase;
-  }
-
-  .custom__card__text {
-    text-align: center;
-    font-size: .48rem;
-    line-height: 1.2;
-    margin: 8px 0;
-
-    &.dino-text,
-    &.water-text {
-      line-height: 1.4;
-      margin: 8px 15px;
-    }
   }
 
   img {
@@ -27,6 +16,12 @@
       height: auto;
       max-width: 93%;
       margin-bottom: 20px;
+    }
+
+    &.cooking-img {
+      height: auto;
+      width: 92%;
+      margin-left: 2%;
     }
   }
 
@@ -44,6 +39,26 @@
     img {
       height: auto;
       max-width: 95%;
+    }
+  }
+
+  .custom__card__text {
+    text-align: center;
+    font-size: .48rem;
+    line-height: 1.2;
+    margin: 8px 0;
+
+    &.dino-text,
+    &.water-text {
+      line-height: 1.4;
+      margin: 8px 15px;
+    }
+
+    &.cooking-text {
+      color: $black;
+      margin: 1rem 0;
+      line-height: 1.4;
+      font-size: .6rem;
     }
   }
 }
