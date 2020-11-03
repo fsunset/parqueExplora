@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
 import CardComponent from "./CardComponent";
-
+import { Modal } from "react-bootstrap";
 import backImg from "./img/btn-back.png";
 import logoZenu from "./img/logo-zenu.png";
-import folderContainerImg from "./img/folder-container.png";
 import ueWhite from "./img/logo-explora-white.png";
+import ueRed from "./img/logo-explora-red.png";
 import milkyWayImg from "./img/img-milky-way.png";
 import universeImg from "./img/img-universe-navigation.png";
 import clayImg from "./img/img-clay.png";
@@ -15,6 +17,50 @@ import './sass/universe.scss';
 
 const UniverseComponent = () => {
   let history = useHistory();
+  const [modalVideoShow, setModalVideoShow] = useState(false);
+  const [modalClassShow, setModalClassShow] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    setModalClassShow(false);
+
+    
+    setUserName("")
+    setUserEmail("")
+    console.log(userName)
+    console.log(userEmail)
+  }
+
+  const VideoModal = (props) => {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body className="p-0" style={{height:"435px"}}>
+          <iframe
+            title="Universe Video"
+            width="100%"
+            height="435"
+            src="https://www.youtube-nocookie.com/embed/gw78h12D5zk"
+            frameborder="0"
+            allow="accelerometer;
+            autoplay;
+            fullscreen;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Modal.Body>
+      </Modal>
+    );
+  }
 
   return (
     <div className="main__universe">
@@ -50,6 +96,7 @@ const UniverseComponent = () => {
                 image={milkyWayImg}
                 text="Vía Láctea, un viaje por la galaxia y a través del sistema solar para describir las maravillas del universo."
                 cssClass=" first"
+                onClickFunc={() => setModalVideoShow(true)}
               />
 
               <CardComponent
@@ -63,8 +110,8 @@ const UniverseComponent = () => {
               </p>
 
               <div className="hours">
-                <span>10am - 11am</span>
-                <span>5pm - 6pm</span>
+                <span onClick={() => setModalClassShow(true)}>10am - 11am</span>
+                <span onClick={() => setModalClassShow(true)}>5pm - 6pm</span>
               </div>
             </div>
           </div>
@@ -84,12 +131,12 @@ const UniverseComponent = () => {
               </p>
 
               <div className="hours">
-                <strong>Clase 1:</strong> <span>9am - 10am</span>
-                <span>2pm - 3pm</span>
+                <strong>Clase 1:</strong> <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
+                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
               </div>
               <div className="hours">
-                <strong>Clase 2:</strong> <span>9am - 10am</span>
-                <span>2pm - 3pm</span>
+                <strong>Clase 2:</strong> <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
+                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
               </div>
             </div>
           </div>
@@ -109,12 +156,12 @@ const UniverseComponent = () => {
               </p>
 
               <div className="hours">
-                <strong>Clase 1:</strong> <span>11am - 12pm</span>
-                <span>4pm - 5pm</span>
+                <strong>Clase 1:</strong> <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
+                <span onClick={() => setModalClassShow(true)}>4pm - 5pm</span>
               </div>
               <div className="hours">
-                <strong>Clase 2:</strong> <span>11am - 12pm</span>
-                <span>4pm - 5pm</span>
+                <strong>Clase 2:</strong> <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
+                <span onClick={() => setModalClassShow(true)}>4pm - 5pm</span>
               </div>
             </div>
           </div>
@@ -126,6 +173,45 @@ const UniverseComponent = () => {
           </div>
         </div>
       </main>
+
+      {/* Vid Modal */}
+      <VideoModal
+        show={modalVideoShow}
+        onHide={() => setModalVideoShow(false)}
+      />
+
+      {/* Class Modal */}
+      <Modal
+        show={modalClassShow}
+        onHide={() => setModalClassShow(false)}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body className="p-0 modal-class-body text-center">
+          <h1>INSCRÍBETE AL CURSO</h1>
+
+          <Form className="p-4" onSubmit={e => formSubmitHandler(e)}>
+            <Form.Group>
+              <Form.Label>Nombre Completo</Form.Label>
+              <Form.Control type="text" required value={userName} onChange={e => setUserName(e.target.value)} />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Correo Electrónico</Form.Label>
+              <Form.Control type="email" required value={userEmail} onChange={e => setUserEmail(e.target.value)} />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+              Enviar
+            </Button>
+          </Form>
+
+          <div>
+            <img src={ueRed} alt="Explora" />
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }

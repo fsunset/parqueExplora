@@ -75,7 +75,7 @@
       }
 
       > span {
-        background: #636363;
+        background: $grey;
         color: white;
         font-size: .65rem;
         margin: 10px 5px;
@@ -85,5 +85,57 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+// Modals
+.modal-class-body {
+  background: url($imagesPath + "bg-grey.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "avenirMedium";
+
+  h1 {
+    text-align: center;
+    color: $black;
+    font-family: 'avenirSemiBold';
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+    margin-top: 40px;
+  }
+
+  .form-label {
+    color: $red;
+    font-size: .6rem;
+  }
+
+  input {
+    border-radius: 30px;
+    line-height: 1;
+    font-size: .5rem;
+  }
+
+  button {
+    background-color: $grey;
+    color: $white;
+    font-family: "avenirMedium";
+    font-weight: 900;
+    border-radius: 40px;
+    font-size: .5rem;
+    border: none;
+
+    &:hover,
+    &.btn-primary:hover {
+      border: none;
+      background-color: $grey;
+      color: $white;
+    }
+  }
+
+  img {
+    max-width: 100px;
+    margin: 20px 0 25px;
   }
 }

@@ -1,8 +1,8 @@
 import './sass/card.scss';
 
-const CardComponent = ({ title, image, text, cssClass="" }) => {
+const CardComponent = ({ title, image, text, cssClass="", onClickFunc }) => {
   return (
-    <div className={`custom__card${cssClass}`}>
+    <div className={`custom__card${cssClass}`} onClick={onClickFunc}>
       <div className="row">
         <div className="col-12">
           <p className="custom__card__title mb-0">{title}</p>

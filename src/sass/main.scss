@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap";
 
 // Fonts
 @font-face {
@@ -18,7 +18,10 @@
 
 // Variables
 $white: #ffffff;
-$red: #F30B05;
+$black: #434343;
+$red: #E80E0F;
+$grey: #636363;
+$softGrey: #A6A6A6;
 $imagesPath: "../img/";
 
 * {
