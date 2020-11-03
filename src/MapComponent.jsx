@@ -14,12 +14,12 @@ const MapComponent = () => {
       </div>
       <div
         className="main__map-dinos"
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/explora-dinosaurios")}
       >
       </div>
       <div
-        className="main__map-under"
-        onClick={() => history.push("/")}
+        className="main__map-water"
+        onClick={() => history.push("/explora-bajo-agua")}
       >
       </div>
       <div

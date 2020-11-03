@@ -11,10 +11,23 @@
     font-size: .48rem;
     line-height: 1.2;
     margin: 8px 0;
+
+    &.dino-text,
+    &.water-text {
+      line-height: 1.4;
+      margin: 8px 15px;
+    }
   }
 
   img {
     height: 140px;
+
+    &.dino-img,
+    &.water-img {
+      height: auto;
+      max-width: 93%;
+      margin-bottom: 20px;
+    }
   }
 
   &.second,
@@ -30,6 +43,7 @@
 
     img {
       height: auto;
+      max-width: 95%;
     }
   }
 }

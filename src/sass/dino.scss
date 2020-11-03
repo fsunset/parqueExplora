@@ -1,0 +1,141 @@
+@import "./main.scss";
+
+.container {
+  max-width: 1400px !important;
+}
+
+.main__dino {
+  background: url($imagesPath + "bg-dino.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  .main__dino-back {
+    cursor: pointer;
+  }
+
+  .main__dino-title {
+    height: 20vh;
+    padding-top: 2rem;
+
+    p {
+      font-family: "pantonBlackCaps";
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: .8;
+    }
+  }
+
+  .main__dino-bottom {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  .folder-container {
+    height: 559px;
+    padding: 0 5px 0 5px;
+
+    .bg-container {
+      width: 100%;
+      height: 100%;
+      background: url($imagesPath + "stone-container.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      padding: .5rem;
+
+      .first img {
+        cursor: pointer;
+      }
+    }
+
+    .line-title {
+      width: 100%;
+      font-size: .55rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .hours {
+      text-align: center;
+
+      strong {
+        font-size: .6rem;
+      }
+
+      > span {
+        background: $grey;
+        color: white;
+        font-size: .65rem;
+        margin: 10px 5px;
+        padding: 8px 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Modals
+.modal-class-body {
+  background: url($imagesPath + "bg-grey.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "avenirMedium";
+
+  h1 {
+    text-align: center;
+    color: $black;
+    font-family: 'avenirSemiBold';
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+    margin-top: 40px;
+  }
+
+  .form-label {
+    color: $red;
+    font-size: .6rem;
+  }
+
+  input {
+    border-radius: 30px;
+    line-height: 1;
+    font-size: .5rem;
+  }
+
+  button {
+    background-color: $grey;
+    color: $white;
+    font-family: "avenirMedium";
+    font-weight: 900;
+    border-radius: 40px;
+    font-size: .5rem;
+    border: none;
+
+    &:hover,
+    &.btn-primary:hover {
+      border: none;
+      background-color: $grey;
+      color: $white;
+    }
+  }
+
+  img {
+    max-width: 100px;
+    margin: 20px 0 25px;
+  }
+}

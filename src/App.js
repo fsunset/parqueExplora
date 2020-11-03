@@ -6,6 +6,8 @@ import {
 import HomeComponent from "./HomeComponent";
 import MapComponent from "./MapComponent";
 import UniverseComponent from "./UniverseComponent";
+import DinoComponent from "./DinoComponent";
+import WaterComponent from "./WaterComponent";
 
 import './sass/home.scss';
 
@@ -13,6 +15,12 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/explora-bajo-agua">
+          <WaterComponent />
+        </Route>
+        <Route path="/explora-dinosaurios">
+          <DinoComponent />
+        </Route>
         <Route path="/explora-universo">
           <UniverseComponent />
         </Route>
