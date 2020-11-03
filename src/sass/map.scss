@@ -1,0 +1,64 @@
+@import "./main.scss";
+
+.main__map {
+  background: url($imagesPath + "map.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+
+  .main__map-universe,
+  .main__map-dinos,
+  .main__map-water,
+  .main__map-explore,
+  .main__map-theatre,
+  .main__map-info,
+  .main__map-cooking {
+    cursor: pointer;
+    position: absolute;
+    top: 17vh;
+    left: 39vw;
+    height: 20vh;
+    width: 22vw;
+  }
+
+  .main__map-dinos {
+    top: 30vh;
+    left: 5vw;
+  }
+
+  .main__map-water {
+    top: 35vh;
+    left: auto;
+    right: 2vw;
+  }
+
+  .main__map-explore {
+    height: 12.7vh;
+    top: 42vh;
+    left: 37vw;
+  }
+
+  .main__map-theatre {
+    height: 14vh;
+    width: 9vw;
+    top: 53vh;
+    left: 26vw;
+  }
+  
+  .main__map-info {
+    height: 12vh;
+    width: 11vw;
+    top: 56.5vh;
+    left: 54vw;
+  }
+
+  .main__map-cooking {
+    height: 10vh;
+    width: 11vw;
+    top: 57vh;
+    left: auto;
+    right: 22vw;
+  }
+}

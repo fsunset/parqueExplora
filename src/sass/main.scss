@@ -1,0 +1,49 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Fonts
+@font-face {
+  font-family: "balibold";
+  src: url("../fonts/balibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ntailu";
+  src: url("../fonts/ntailu.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "barlowSemiCondensedBlack";
+  src: url("../fonts/barlowSemiCondensedBlack.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "pantonBlackCaps";
+  src: url("../fonts/pantonBlackCaps.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "avenirMedium";
+  src: url("../fonts/avenirMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "avenirSemiBold";
+  src: url("../fonts/avenirSemiBold.otf") format("opentype");
+}
+
+// Variables
+$white: #ffffff;
+$red: #F30B05;
+$imagesPath: "../img/";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: calc(10px + 2vmin);
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,153 @@
+@import "./main.scss";
+
+.main {
+  font-family: "avenirMedium";
+  background: url($imagesPath + "bg.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .container__title {
+    height: 20vh;
+
+    p {
+      font-family: "avenirSemiBold";
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+
+  .container__body {
+    height: 60vh;
+
+    .container__body__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > img {
+        max-width: 55%;
+        margin-bottom: .8rem;
+      }
+
+      .container__body__right-middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-family: "pantonBlackCaps";
+          font-size: 2.1rem;
+          line-height: .85;
+          border: 3px dotted white;
+          padding: .5rem 0;
+          border-radius: 25px;
+          margin-bottom: 10px;
+          width: 80%;
+        }
+
+        span {
+          font-family: "avenirMedium";
+          letter-spacing: .5px;
+          text-transform: uppercase;
+          font-weight: bolder;
+          font-size: 1rem;
+          font-size: .52rem;
+          position: relative;
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            right: -35px;
+            top: 0;
+            width: 30px;
+            height: 20px;
+            background: url($imagesPath + "rocket.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+
+          &:before {
+            transform: scaleX(-1);
+            right: auto;
+            left: -35px;
+          }
+        }
+      }
+
+      .container__body__right-form {
+        margin-top: 1rem;
+        width: 80%;
+
+        > span {
+          font-size: .75rem;
+        }
+
+        > div {
+          display: flex;
+          width: 100%;
+
+          input {
+            width: 70%;
+            border: none;
+            color: #303030;
+            font-size: .6rem;
+            text-align: center;
+
+            &.validation-error {
+              border: 2px solid $red;
+            }
+          }
+
+          button {
+            width: 30%;
+            font-size: .5rem;
+            color: white;
+            background: #303030;
+            border: none;
+            border-radius: 0;
+            margin-left: 7px;
+
+            &:hover {
+              color: white;
+              background: #303030;
+              border: none;
+              border-radius: 0;
+            }
+          }
+        }
+
+        .container__body__right-form-error {
+          display: block;
+          background: $red;
+          margin-top: .3rem;
+          font-size: .5rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}

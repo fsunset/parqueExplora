@@ -1,12 +1,29 @@
-import './main.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import HomeComponent from "./HomeComponent";
+import MapComponent from "./MapComponent";
+import UniverseComponent from "./UniverseComponent";
 
-function App() {
+import './sass/home.scss';
+
+const App = () => {
   return (
-    <div className="app">
-      <header className="app__header">
-        hi there
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/explora-universo">
+          <UniverseComponent />
+        </Route>
+        <Route path="/mapa">
+          <MapComponent />
+        </Route>
+        <Route path="/">
+          <HomeComponent />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

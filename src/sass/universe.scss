@@ -1,0 +1,10 @@
+@import "./main.scss";
+
+.main__universe {
+  background: url($imagesPath + "bg-universe.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+}
