@@ -11,6 +11,7 @@ import WaterComponent from "./WaterComponent";
 import CookingComponent from "./CookingComponent";
 import TheatreComponent from "./TheatreComponent";
 import InfoComponent from "./InfoComponent";
+import ExploreComponent from "./ExploreComponent";
 
 import './sass/home.scss';
 
@@ -18,6 +19,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/explora-y-experimenta">
+          <ExploreComponent />
+        </Route>
         <Route path="/informate">
           <InfoComponent />
         </Route>
