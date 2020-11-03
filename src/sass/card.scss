@@ -1,0 +1,35 @@
+.custom__card {
+  padding: 0rem 0rem 0rem .75rem;
+
+  .custom__card__title {
+    font-size: .67rem;
+    text-transform: uppercase;
+  }
+
+  .custom__card__text {
+    text-align: center;
+    font-size: .48rem;
+    line-height: 1.2;
+    margin: 8px 0;
+  }
+
+  img {
+    height: 140px;
+  }
+
+  &.second,
+  &.third {
+    margin-top: 35px;
+
+    .custom__card__title {
+      text-align: center;
+      font-size: .8rem;
+      line-height: 1.2;
+      margin-bottom: 5px !important;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+}
