@@ -29,13 +29,13 @@ const HomeComponent = () => {
         </div>
 
         <div className="row container__body">
-          <div className="col-7">
+          <div className="col-6">
             <div className="container__body__left">
               <img src={ueColour} alt="UE" />
             </div>
           </div>
 
-          <div className="col-5">
+          <div className="col-4 offset-1">
             <div className="container__body__right">
               <img src={ueWhite} alt="Parque Explora" />
               
