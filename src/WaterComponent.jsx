@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Firebase from './firebaseConfig';
 import { useHistory } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import CardComponent from "./CardComponent";
@@ -17,21 +18,35 @@ import waterImg4 from "./img/img-water-4.png";
 import './sass/water.scss';
 
 const WaterComponent = () => {
+  // For saving info Firebase
+  const db = Firebase.firestore();
+
   let history = useHistory();
   const [modalVideoShow, setModalVideoShow] = useState(false);
   const [modalClassShow, setModalClassShow] = useState(false);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  const [activeCourse, setActiveCourse] = useState({
+    courseCode: 0,
+    courseName: "",
+    courseTime: "",
+  });
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
     setModalClassShow(false);
 
+    // Saving info Firebase DB
+    db.collection("users").add({
+      name: userName,
+      email: userEmail,
+      courseCode: activeCourse.courseCode,
+      courseName: activeCourse.courseName,
+      courseTime: activeCourse.courseTime,
+    });
     
     setUserName("")
     setUserEmail("")
-    console.log(userName)
-    console.log(userEmail)
   }
 
   const VideoModal = (props) => {
@@ -109,8 +124,30 @@ const WaterComponent = () => {
               </p>
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
-                <span onClick={() => setModalClassShow(true)}>12pm - 1pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Peces payaso en plastilina",
+                        courseTime: "11am - 12pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >11am - 12pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Peces payaso en plastilina",
+                        courseTime: "12pm - 1pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >12pm - 1pm</span>
               </div>
             </div>
           </div>
@@ -130,8 +167,30 @@ const WaterComponent = () => {
               </p>
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
-                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "taller Dibujo de pirañas",
+                        courseTime: "9am - 10am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >9am - 10am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "taller Dibujo de pirañas",
+                        courseTime: "2pm - 3pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >2pm - 3pm</span>
               </div>
             </div>
           </div>
@@ -139,7 +198,7 @@ const WaterComponent = () => {
           <div className="col-3 folder-container">
             <div className="bg-container">
               <CardComponent
-                title="navegación por Amazonas "
+                title="navegación por Amazonas"
                 image={waterImg3}
                 text="Sumergete al interior del Acuario Parque Explora y conoce las especies representativas del Amazonas.
                 Una experiencia única donde conocerás al Pirarucú, un gigante prehistórico considerado uno de los peces de agua dulce mas grande del mundo."
@@ -151,8 +210,30 @@ const WaterComponent = () => {
               </p>
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
-                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "navegación por Amazonas",
+                        courseTime: "9am - 10am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >9am - 10am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "navegación por Amazonas",
+                        courseTime: "2pm - 3pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >2pm - 3pm</span>
               </div>
             </div>
           </div>
@@ -168,14 +249,25 @@ const WaterComponent = () => {
               />
 
               <CardComponent
-                title="ranas de origami"
+                title="Ranas de origami"
                 image={waterImg4}
                 text="En este taller aprenderemos a crear ranas en origami, conociendo sobre esta increíble especie y su naturaleza."
               />
 
               <div className="hours">
                 <strong>Inscríbete aquí</strong>
-                <span onClick={() => setModalClassShow(true)}>4pm - 5pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Ranas de origami",
+                        courseTime: "4pm - 5pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >4pm - 5pm</span>
               </div>
             </div>
           </div>

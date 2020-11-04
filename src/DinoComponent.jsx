@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Firebase from './firebaseConfig';
 import { useHistory } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import CardComponent from "./CardComponent";
@@ -14,6 +15,14 @@ import dinoImg from "./img/dinos-class.png";
 import './sass/dino.scss';
 
 const DinoComponent = () => {
+  // For saving info Firebase
+  const db = Firebase.firestore();
+  const [activeCourse, setActiveCourse] = useState({
+    courseCode: 0,
+    courseName: "",
+    courseTime: "",
+  });
+
   let history = useHistory();
   const [modalVideoShow, setModalVideoShow] = useState(false);
   const [modalClassShow, setModalClassShow] = useState(false);
@@ -24,11 +33,17 @@ const DinoComponent = () => {
     e.preventDefault();
     setModalClassShow(false);
 
+    // Saving info Firebase DB
+    db.collection("users").add({
+      name: userName,
+      email: userEmail,
+      courseCode: activeCourse.courseCode,
+      courseName: activeCourse.courseName,
+      courseTime: activeCourse.courseTime,
+    });
     
     setUserName("")
     setUserEmail("")
-    console.log(userName)
-    console.log(userEmail)
   }
 
   const VideoModal = (props) => {
@@ -121,12 +136,58 @@ const DinoComponent = () => {
               </p>
 
               <div className="hours">
-                <strong>Clase 1:</strong> <span onClick={() => setModalClassShow(true)}>10am - 11am</span>
-                <span onClick={() => setModalClassShow(true)}>3pm - 4pm</span>
+                <strong>Clase 1:</strong>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 1,
+                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseTime: "10am - 11am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >10am - 11am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 1,
+                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseTime: "3pm - 4pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >3pm - 4pm</span>
               </div>
               <div className="hours">
-                <strong>Clase 2:</strong> <span onClick={() => setModalClassShow(true)}>10am - 11am</span>
-                <span onClick={() => setModalClassShow(true)}>3pm - 4pm</span>
+                <strong>Clase 2:</strong>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 2,
+                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseTime: "10am - 11am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >10am - 11am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 2,
+                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseTime: "3pm - 4pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >3pm - 4pm</span>
               </div>
             </div>
           </div>
@@ -146,8 +207,30 @@ const DinoComponent = () => {
               </p>
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
-                <span onClick={() => setModalClassShow(true)}>4pm - 5pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Dinosaurios en plastilina",
+                        courseTime: "11am - 12pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >11am - 12pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Dinosaurios en plastilina",
+                        courseTime: "4pm - 5pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >4pm - 5pm</span>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Firebase from './firebaseConfig';
 import { useHistory } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import CardComponent from "./CardComponent";
@@ -17,6 +18,14 @@ import exploreImg7 from "./img/img-explore-7.jpg";
 import './sass/explore.scss';
 
 const ExploreComponent = () => {
+  // For saving info Firebase
+  const db = Firebase.firestore();
+  const [activeCourse, setActiveCourse] = useState({
+    courseCode: 0,
+    courseName: "",
+    courseTime: "",
+  });
+
   let history = useHistory();
   const [modalClassShow, setModalClassShow] = useState(false);
   const [userName, setUserName] = useState("");
@@ -26,11 +35,17 @@ const ExploreComponent = () => {
     e.preventDefault();
     setModalClassShow(false);
 
+    // Saving info Firebase DB
+    db.collection("users").add({
+      name: userName,
+      email: userEmail,
+      courseCode: activeCourse.courseCode,
+      courseName: activeCourse.courseName,
+      courseTime: activeCourse.courseTime,
+    });
     
     setUserName("")
     setUserEmail("")
-    console.log(userName)
-    console.log(userEmail)
   }
 
   return (
@@ -74,8 +89,30 @@ const ExploreComponent = () => {
               />
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
-                <span onClick={() => setModalClassShow(true)}>12pm - 1pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
+                        courseTime: "11am - 12pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >11am - 12pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
+                        courseTime: "12pm - 1pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >12pm - 1pm</span>
               </div>
             </div>
           </div>
@@ -95,7 +132,18 @@ const ExploreComponent = () => {
 
               <div className="hours">
                 <strong>Inscríbete aquí</strong>
-                <span onClick={() => setModalClassShow(true)}>9am - 10am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Taller magia y ciencia",
+                        courseTime: "9am - 10am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >9am - 10am</span>
               </div>
 
               <CardComponent
@@ -111,7 +159,18 @@ const ExploreComponent = () => {
 
               <div className="hours">
                 <strong>Inscríbete aquí</strong>
-                <span onClick={() => setModalClassShow(true)}>11am - 12pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Maestros del disfraz",
+                        courseTime: "11am - 12pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >11am - 12pm</span>
               </div>
             </div>
           </div>
@@ -130,8 +189,30 @@ const ExploreComponent = () => {
               />
 
               <div className="hours">
-                <span onClick={() => setModalClassShow(true)}>12pm - 1pm</span>
-                <span onClick={() => setModalClassShow(true)}>5pm - 6pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "TALLER DE química y magia",
+                        courseTime: "12pm - 1pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >12pm - 1pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "TALLER DE química y magia",
+                        courseTime: "5pm - 6pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >5pm - 6pm</span>
               </div>
 
               <CardComponent
@@ -145,7 +226,18 @@ const ExploreComponent = () => {
 
               <div className="hours">
                 <strong>Inscríbete aquí</strong>
-                <span onClick={() => setModalClassShow(true)}>2pm - 3pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseCode: 0,
+                        courseName: "Taller de experimentación química",
+                        courseTime: "2pm - 3pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >2pm - 3pm</span>
               </div>
             </div>
           </div>
