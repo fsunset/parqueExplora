@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import CardComponent from "./CardComponent";
 import { Modal } from "react-bootstrap";
+import Firebase from './firebaseConfig';
 import backImg from "./img/btn-back.png";
 import logoZenu from "./img/logo-zenu.png";
 import ueWhite from "./img/logo-explora-white.png";
@@ -16,7 +17,11 @@ import meetingImg from "./img/img-universe-meeting.png";
 import './sass/universe.scss';
 
 const UniverseComponent = () => {
+  // For saving info Firebase
+  const db = Firebase.firestore();
+
   let history = useHistory();
+
   const [modalVideoShow, setModalVideoShow] = useState(false);
   const [modalClassShow, setModalClassShow] = useState(false);
   const [userName, setUserName] = useState("");
@@ -26,11 +31,14 @@ const UniverseComponent = () => {
     e.preventDefault();
     setModalClassShow(false);
 
+    // Saving info Firebase DB
+    db.collection("users").add({
+      name: userName,
+      email: userEmail,
+    });
     
     setUserName("")
     setUserEmail("")
-    console.log(userName)
-    console.log(userEmail)
   }
 
   const VideoModal = (props) => {
