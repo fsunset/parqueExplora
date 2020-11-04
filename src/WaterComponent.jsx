@@ -44,6 +44,24 @@ const WaterComponent = () => {
       courseName: activeCourse.courseName,
       courseTime: activeCourse.courseTime,
     });
+
+    // POST request to send user's email
+    fetch('https://parque-explora-endpoints-back.herokuapp.com/api/user/signup', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          "name": userName,
+          "userEmail": userEmail,
+          "courseName": activeCourse.courseName,
+          "courseTime": activeCourse.courseTime,
+          "courseCode": activeCourse.courseCode
+        }
+      )
+    });
     
     setUserName("")
     setUserEmail("")
