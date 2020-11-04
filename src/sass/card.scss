@@ -3,6 +3,10 @@
 .custom__card {
   padding: 0rem 0rem 0rem .75rem;
 
+  &.closer-left {
+    padding-left: .5rem;
+  }
+
   .custom__card__title {
     font-size: .67rem;
     text-transform: uppercase;
@@ -35,7 +39,7 @@
     }
 
     &.explore-img-xsmall {
-      height: 100px;
+      height: 90px;
     }
   }
 

@@ -90,6 +90,7 @@ const ExploreComponent = () => {
                 cssTitle=" text-center"
                 cssImg="explore-img-xsmall"
                 cssText="explore-text my-1 explore-text-small"
+                cssClass=" closer-left"
               />
 
               <div className="hours">
@@ -105,6 +106,7 @@ const ExploreComponent = () => {
                 cssText="explore-text my-1 explore-text-small"
                 cssImg="explore-img-xsmall"
                 cssTitle=" text-center"
+                cssClass=" closer-left"
               />
 
               <div className="hours">
@@ -124,6 +126,7 @@ const ExploreComponent = () => {
                 cssText="explore-text my-1 explore-text-small"
                 cssTitle=" text-center"
                 cssImg="explore-img-xsmall"
+                cssClass=" closer-left"
               />
 
               <div className="hours">
@@ -159,7 +162,7 @@ const ExploreComponent = () => {
                 cssImg="explore-img-small"
               />
 
-              <div className="hours" style={{ marginTop: "-10px", marginBottom: "5px" }}>
+              <div className="hours">
                 <a href="https://encasa.parqueexplora.org/experimenta/" target="_blank" rel="noreferrer">
                   <span>clic aquí</span>
                 </a>
@@ -173,7 +176,7 @@ const ExploreComponent = () => {
                 cssImg="explore-img-small"
               />
 
-              <div className="hours" style={{marginTop: "-10px", marginBottom: "5px"}}>
+              <div className="hours">
                 <a href="https://encasa.parqueexplora.org/experimenta/" target="_blank" rel="noreferrer">
                   <span>clic aquí</span>
                 </a>
