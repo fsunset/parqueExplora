@@ -207,7 +207,7 @@ const UniverseComponent = () => {
             </Button>
           </Form>
 
-          <div>
+          <div className="bottom">
             <img src={ueRed} alt="Explora" />
           </div>
         </Modal.Body>

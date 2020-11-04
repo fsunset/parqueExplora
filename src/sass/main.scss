@@ -35,3 +35,9 @@ $imagesPath: "../img/";
 img {
   max-width: 100%;
 }
+
+// Globals
+.modal-class-body .bottom img {
+  max-width: 150px !important;
+  margin: 20px 0 25px !important;
+}
