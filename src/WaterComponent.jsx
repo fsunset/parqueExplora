@@ -30,6 +30,7 @@ const WaterComponent = () => {
     courseCode: 0,
     courseName: "",
     courseTime: "",
+    courseLink: "",
   });
 
   const formSubmitHandler = (e) => {
@@ -43,6 +44,7 @@ const WaterComponent = () => {
       courseCode: activeCourse.courseCode,
       courseName: activeCourse.courseName,
       courseTime: activeCourse.courseTime,
+      courseLink: activeCourse.courseLink,
     });
 
     // POST request to send user's email
@@ -58,7 +60,8 @@ const WaterComponent = () => {
           "userEmail": userEmail,
           "courseName": activeCourse.courseName,
           "courseTime": activeCourse.courseTime,
-          "courseCode": activeCourse.courseCode
+          "courseCode": activeCourse.courseCode,
+          "courseLink": activeCourse.courseLink,
         }
       )
     });
@@ -146,6 +149,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92099835474",
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "11am - 12pm",
@@ -158,6 +162,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/96251711552",
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "12pm - 1pm",
@@ -189,6 +194,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/91997675162?pwd=bXA1TjF4b25ZVHlVVDBzSWVENlpyUT09",
                         courseCode: 0,
                         courseName: "taller Dibujo de pirañas",
                         courseTime: "9am - 10am",
@@ -201,6 +207,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/94404232142?pwd=U09vc21lTWRCcnFpclVBSHFQOE45UT09",
                         courseCode: 0,
                         courseName: "taller Dibujo de pirañas",
                         courseTime: "2pm - 3pm",
@@ -232,6 +239,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92882499080?pwd=S0tnWkpkeERuN0ZRazcrNkJJSDBldz09",
                         courseCode: 0,
                         courseName: "navegación por Amazonas",
                         courseTime: "9am - 10am",
@@ -244,6 +252,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/94162195418?pwd=ZlBJZmZpMlpFTkpMMGtSOThHSkxxZz09",
                         courseCode: 0,
                         courseName: "navegación por Amazonas",
                         courseTime: "2pm - 3pm",
@@ -278,6 +287,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/94957174564",
                         courseCode: 0,
                         courseName: "Ranas de origami",
                         courseTime: "4pm - 5pm",

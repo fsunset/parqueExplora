@@ -21,6 +21,7 @@ const DinoComponent = () => {
     courseCode: 0,
     courseName: "",
     courseTime: "",
+    courseLink: "",
   });
 
   let history = useHistory();
@@ -40,6 +41,26 @@ const DinoComponent = () => {
       courseCode: activeCourse.courseCode,
       courseName: activeCourse.courseName,
       courseTime: activeCourse.courseTime,
+      courseLink: activeCourse.courseLink,
+    });
+
+    // POST request to send user's email
+    fetch('https://parque-explora-endpoints-back.herokuapp.com/api/user/signup', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          "name": userName,
+          "userEmail": userEmail,
+          "courseName": activeCourse.courseName,
+          "courseTime": activeCourse.courseTime,
+          "courseCode": activeCourse.courseCode,
+          "courseLink": activeCourse.courseLink,
+        }
+      )
     });
     
     setUserName("")
@@ -141,6 +162,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/98120670055?pwd=bFdNR1NMU3RKOVowdm5FOUV6bVVldz09",
                         courseCode: 1,
                         courseName: "DINOSAURIOS EN ORIGAMI",
                         courseTime: "10am - 11am",
@@ -153,6 +175,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92157201953?pwd=UlgvVFEreUd3bCt4TkwyNzIvNWlCZz09",
                         courseCode: 1,
                         courseName: "DINOSAURIOS EN ORIGAMI",
                         courseTime: "3pm - 4pm",
@@ -168,6 +191,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/95500988319?pwd=QTNFcm83SnJrSFc4bUlkY1BQN3VMdz09",
                         courseCode: 2,
                         courseName: "DINOSAURIOS EN ORIGAMI",
                         courseTime: "10am - 11am",
@@ -180,6 +204,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92780349604?pwd=S1VQTzFxMERJd2ZoRjBKL2NUZGladz09",
                         courseCode: 2,
                         courseName: "DINOSAURIOS EN ORIGAMI",
                         courseTime: "3pm - 4pm",
@@ -211,6 +236,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: " https://zoom.us/j/96979010972",
                         courseCode: 0,
                         courseName: "Dinosaurios en plastilina",
                         courseTime: "11am - 12pm",
@@ -223,6 +249,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/98556103501",
                         courseCode: 0,
                         courseName: "Dinosaurios en plastilina",
                         courseTime: "4pm - 5pm",

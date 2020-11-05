@@ -30,8 +30,8 @@ const UniverseComponent = () => {
     courseCode: 0,
     courseName: "",
     courseTime: "",
+    courseLink: "",
   });
-
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -44,6 +44,26 @@ const UniverseComponent = () => {
       courseCode: activeCourse.courseCode,
       courseName: activeCourse.courseName,
       courseTime: activeCourse.courseTime,
+      courseLink: activeCourse.courseLink,
+    });
+
+    // POST request to send user's email
+    fetch('https://parque-explora-endpoints-back.herokuapp.com/api/user/signup', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          "name": userName,
+          "userEmail": userEmail,
+          "courseName": activeCourse.courseName,
+          "courseTime": activeCourse.courseTime,
+          "courseCode": activeCourse.courseCode,
+          "courseLink": activeCourse.courseLink,
+        }
+      )
     });
     
     setUserName("")
@@ -131,6 +151,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/98559538968",
                         courseCode: 0,
                         courseName: "Navegación por el Universo",
                         courseTime: "10am - 11am",
@@ -145,6 +166,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/93769047683",
                         courseCode: 0,
                         courseName: "Navegación por el Universo",
                         courseTime: "5pm - 6pm",
@@ -179,6 +201,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/95456278807?pwd=dWgzWnVyaElvQ1NkRHlhdWNUZXRoZz09",
                         courseCode: 1,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "9am - 10am",
@@ -191,6 +214,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/95688787812?pwd=RDZ1akdxNDgwNU5BK2FhZFRFMWhRZz09",
                         courseCode: 1,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "2pm - 3pm",
@@ -206,6 +230,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/93812018435?pwd=UXdlRzVpZzd2ai9IYStTV2JOS3VNdz09",
                         courseCode: 2,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "9am - 10am",
@@ -218,6 +243,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/99304409597",
                         courseCode: 2,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "2pm - 3pm",
@@ -250,6 +276,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92853382714?pwd=SjQ0ajlBcEhtVm1UNE9TY2wyOWFnZz09",
                         courseCode: 1,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "11am - 12pm",
@@ -262,6 +289,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/97555520710?pwd=cGN4VmN0R3k0RnR5amFSSCt1eWRTUT09",
                         courseCode: 1,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "4pm - 5pm",
@@ -277,6 +305,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92489437110?pwd=SGx2QjlRcEFKQm5PcGR1V0NSOVJxdz09",
                         courseCode: 2,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "11am - 12pm",
@@ -289,6 +318,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/91669893944",
                         courseCode: 2,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "4pm - 5pm",

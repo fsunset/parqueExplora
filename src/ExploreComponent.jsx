@@ -24,6 +24,7 @@ const ExploreComponent = () => {
     courseCode: 0,
     courseName: "",
     courseTime: "",
+    courseLink: "",
   });
 
   let history = useHistory();
@@ -42,6 +43,26 @@ const ExploreComponent = () => {
       courseCode: activeCourse.courseCode,
       courseName: activeCourse.courseName,
       courseTime: activeCourse.courseTime,
+      courseLink: activeCourse.courseLink,
+    });
+
+    // POST request to send user's email
+    fetch('https://parque-explora-endpoints-back.herokuapp.com/api/user/signup', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          "name": userName,
+          "userEmail": userEmail,
+          "courseName": activeCourse.courseName,
+          "courseTime": activeCourse.courseTime,
+          "courseCode": activeCourse.courseCode,
+          "courseLink": activeCourse.courseLink,
+        }
+      )
     });
     
     setUserName("")
@@ -93,18 +114,20 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/95590384803?pwd=L3FCR2VUa1RDekdOQ0hlR1ZncExidz09",
                         courseCode: 0,
                         courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
-                        courseTime: "11am - 12pm",
+                        courseTime: "3pm - 4pm",
                       });
                       setModalClassShow(true);
                     }
                   }
-                >11am - 12pm</span>
-                <span
+                >3pm - 4pm</span>
+                {/* <span
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "xxxx",
                         courseCode: 0,
                         courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
                         courseTime: "12pm - 1pm",
@@ -112,7 +135,7 @@ const ExploreComponent = () => {
                       setModalClassShow(true);
                     }
                   }
-                >12pm - 1pm</span>
+                >12pm - 1pm</span> */}
               </div>
             </div>
           </div>
@@ -136,6 +159,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/98873643852",
                         courseCode: 0,
                         courseName: "Taller magia y ciencia",
                         courseTime: "9am - 10am",
@@ -163,6 +187,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/93329142069",
                         courseCode: 0,
                         courseName: "Maestros del disfraz",
                         courseTime: "11am - 12pm",
@@ -193,6 +218,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/92418966070",
                         courseCode: 0,
                         courseName: "TALLER DE química y magia",
                         courseTime: "12pm - 1pm",
@@ -205,6 +231,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/93336278639",
                         courseCode: 0,
                         courseName: "TALLER DE química y magia",
                         courseTime: "5pm - 6pm",
@@ -230,6 +257,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/99363862997?pwd=RWN4MDJhdUhBYll4ak9PUlo1a0lDQT09",
                         courseCode: 0,
                         courseName: "Taller de experimentación química",
                         courseTime: "2pm - 3pm",
