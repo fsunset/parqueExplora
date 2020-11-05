@@ -104,7 +104,7 @@ const WaterComponent = () => {
     <div className="main__water">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__water-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -113,21 +113,27 @@ const WaterComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__water-title">
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__water-title d-none d-md-block">
               <p>Explora <br />bajo el agua</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__water-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
+            </div>
+          </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__water-title">
+              <p>Explora <br />bajo el agua</p>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title="Peces payaso en plastilina"
@@ -135,9 +141,9 @@ const WaterComponent = () => {
                 text="Lo puedes conocer como Nemo, este colorido y particular pez habita en el 
                 Oriente de los océanos Índico y Pacífico Occidental. Moldea un pez payaso en este taller mientras nos sumergimos en su historia."
                 onClickFunc={() => setModalVideoShow(true)}
-                cssTitle="mb-2 pl-2"
-                cssImg="water-img"
-                cssText="water-text"
+                cssTitle="text-center mt-1 mb-3 mt-md-0 mb-md-0"
+                cssImg="water-img mb-2"
+                cssText="water-text mt-0"
               />
 
               <p className="line-title">
@@ -189,7 +195,7 @@ const WaterComponent = () => {
             </div>
           </div>
           
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="taller Dibujo de pirañas"
@@ -234,7 +240,7 @@ const WaterComponent = () => {
             </div>
           </div>
 
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="navegación por Amazonas"
@@ -279,7 +285,7 @@ const WaterComponent = () => {
             </div>
           </div>
 
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="RECORRIDO ACUARIO"
