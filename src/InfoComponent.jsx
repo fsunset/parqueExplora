@@ -35,7 +35,7 @@ const InfoComponent = () => {
     <div className="main__info">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__info-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -44,12 +44,12 @@ const InfoComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
+          <div className="col-1 col-md-7 text-center">
             <div className="main__info-title">
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__info-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
             </div>
@@ -57,9 +57,9 @@ const InfoComponent = () => {
         </div>
 
         <div className="row" style={{marginTop: "15px"}}>
-          <div className="col-8 offset-4 folder-container">
+          <div className="col-12 col-md-8 offset-md-4 folder-container">
             <div className="bg-container pt-4">
-              <h1 className="my-4">PUNTO DE INFORMACIÓN</h1>
+              <h1 className="mt-0 my-md-4">PUNTO DE INFORMACIÓN</h1>
 
               <ul>
                 <li onClick={() => showModalHandler("https://raw.githubusercontent.com/fsunset/parqueExplora/master/src/img/info-1.png")}><p>¿Como funciona el mapa?</p></li>

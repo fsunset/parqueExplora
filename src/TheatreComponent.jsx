@@ -15,7 +15,7 @@ const TheatreComponent = () => {
     <div className="main__theatre">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__theatre-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -24,21 +24,27 @@ const TheatreComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__theatre-title">
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__theatre-title d-none d-md-block">
               <p>Explora <br />teatro</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__theatre-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
             </div>
           </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__theatre-title">
+              <p>Explora <br />teatro</p>
+            </div>
+          </div>
         </div>
 
-        <div className="row" style={{marginTop: "15px"}}>
-          <div className="col-4 offset-1 folder-container">
+        <div className="row folders-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-2 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title="CONCIERTO"
@@ -55,7 +61,7 @@ const TheatreComponent = () => {
             </div>
           </div>
           
-          <div className="col-4 offset-1 folder-container">
+          <div className="col-10 offset-1 col-md-4 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title="OBRA TEATRO EXPLORA"

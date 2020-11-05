@@ -92,6 +92,13 @@
       width: 88%;
     }
 
+    &.theatre-text {
+      font-size: .65rem;
+      @media (min-width: 768px) {
+        font-size: .5rem;
+      }
+    }
+
     &.explore-text {
       width: 93%;
     }

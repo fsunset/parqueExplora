@@ -5,10 +5,16 @@
 }
 
 .main__info {
-  background: url($imagesPath + "bg-info.jpg");
+  background: url($imagesPath + "bg-info-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  @media (min-width: 768px) {
+    background: url($imagesPath + "bg-info.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  }
   height: 100%;
   min-height: 100vh;
   position: relative;
@@ -45,8 +51,11 @@
   }
 
   .folder-container {
-    height: 559px;
-    padding: 0 5px 0 5px;
+    height: 50vh;
+    @media (min-width: 768px) {
+      height: 559px;
+      padding: 0 5px 0 5px;
+    }
 
     .bg-container {
       width: 100%;
@@ -56,6 +65,12 @@
       background-repeat: no-repeat;
       padding: 2rem;
       font-family: "avenirSemiBold";
+      text-align: center;
+      max-height: 368px;
+      @media (min-width: 768px) {
+        text-align: left;
+        max-height: none;
+      }
 
       h1 {
         font-size: 1.65rem;
@@ -66,14 +81,20 @@
         margin-left: .8rem;
         background: rgba(0,0,0,.7);
         border-radius: 40px;
-        width: fit-content;
         padding: .1rem .55rem;
         margin-bottom: .5rem;
         cursor: pointer;
+        width: 91%;
+        @media (min-width: 768px) {
+          width: fit-content;
+        }
 
         p {
           margin-bottom: 0;
-          font-size: 1.25rem;
+          font-size: 1rem;
+          @media (min-width: 768px) {
+            font-size: 1.25rem;
+          }
         }
       }
     }
