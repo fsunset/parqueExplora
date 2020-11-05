@@ -11,6 +11,8 @@ import ueRed from "./img/logo-explora-red.png";
 import lineWhite from "./img/line-white.png";
 import vidImg from "./img/dinos-vid.png";
 import dinoImg from "./img/dinos-class.png";
+import dinoImg2 from "./img/dino-doll.jpg";
+
 
 import './sass/dino.scss';
 
@@ -221,7 +223,7 @@ const DinoComponent = () => {
             <div className="bg-container">
               <CardComponent
                 title="Dinosaurios en plastilina"
-                image={dinoImg}
+                image={dinoImg2}
                 text="Los dinosaurios pueden ser grandes como un edificio o tan pequeños como un perro, de cuello largo,
                 con cuernos, de fauces gigantes o cubiertos de espinas, son tan diversos como la vida. Conoce más de ellos mientras moldeamos uno en plastilina."
                 cssClass=" second"

@@ -171,6 +171,20 @@ const WaterComponent = () => {
                     }
                   }
                 >12pm - 1pm</span>
+                <br/>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/91503520593",
+                        courseCode: 0,
+                        courseName: "Peces payaso en plastilina",
+                        courseTime: "4pm - 5pm",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >4pm - 5pm</span>
               </div>
             </div>
           </div>

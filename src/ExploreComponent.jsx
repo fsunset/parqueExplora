@@ -114,6 +114,19 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
+                        courseLink: "https://zoom.us/j/94504415469",
+                        courseCode: 0,
+                        courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
+                        courseTime: "10am - 11am",
+                      });
+                      setModalClassShow(true);
+                    }
+                  }
+                >10am - 11am</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
                         courseLink: "https://zoom.us/j/95590384803?pwd=L3FCR2VUa1RDekdOQ0hlR1ZncExidz09",
                         courseCode: 0,
                         courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
@@ -123,19 +136,6 @@ const ExploreComponent = () => {
                     }
                   }
                 >3pm - 4pm</span>
-                {/* <span
-                  onClick={
-                    () => {
-                      setActiveCourse({
-                        courseLink: "xxxx",
-                        courseCode: 0,
-                        courseName: "TALLER DE EXPERIMENTACIÓN FÍSICA",
-                        courseTime: "12pm - 1pm",
-                      });
-                      setModalClassShow(true);
-                    }
-                  }
-                >12pm - 1pm</span> */}
               </div>
             </div>
           </div>
