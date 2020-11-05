@@ -7,7 +7,7 @@ import logoZenu from "./img/logo-zenu.png";
 import ueWhite from "./img/logo-explora-white.png";
 import vidImg from "./img/vid-cooking.jpg";
 import cookingPopup from "./img/popup-cooking.png";
-import cookingStick from "./img/cooking-stick.png";
+// import cookingStick from "./img/cooking-stick.png";
 
 import './sass/cooking.scss';
 
@@ -50,7 +50,7 @@ const CookingComponent = () => {
     <div className="main__cooking">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__cooking-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -59,21 +59,27 @@ const CookingComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__cooking-title">
-              <p>Explora <br />SABORES</p>
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__cooking-title d-none d-md-block">
+              <p>Explora <br />sabores</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__cooking-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
+            </div>
+          </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__cooking-title">
+              <p>Explora <br />sabores</p>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-6 offset-1 folder-container">
+          <div className="col-12 col-md-6 offset-md-1 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title=""
@@ -87,11 +93,11 @@ const CookingComponent = () => {
                 cssText="cooking-text"
               />
 
-              <img src={cookingStick} alt="stick" className="stick" />
+              {/* <img src={cookingStick} alt="stick" className="stick" /> */}
             </div>
           </div>
           
-          <div className="col-2 offset-2 folder-container right-container-small">
+          <div className="col-12 col-md-2 offset-md-2 folder-container right-container-small">
             <p className="line-title">Haz <u onClick={() => setModalRecipeShow(true)}>clic aquí</u> para conocer los ingredientes de este delicioso postre</p>
           </div>
         </div>

@@ -99,6 +99,13 @@
       }
     }
 
+    &.cooking-text {
+      font-size: .765rem;
+      @media (min-width: 768px) {
+        font-size: .5rem;
+      }
+    }
+
     &.explore-text {
       width: 93%;
     }

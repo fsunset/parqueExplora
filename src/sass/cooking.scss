@@ -5,10 +5,16 @@
 }
 
 .main__cooking {
-  background: url($imagesPath + "bg-cooking.jpg");
+  background: url($imagesPath + "bg-cooking-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  @media (min-width: 768px) {
+    background: url($imagesPath + "bg-cooking.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
   height: 100%;
   min-height: 100vh;
   position: relative;
@@ -45,8 +51,13 @@
   }
 
   .folder-container {
-    height: 559px;
     padding: 0 5px 0 5px;
+    height: 48%;
+    max-height: 375px;
+    @media (min-width: 768px) {
+      height: 559px;
+      max-height: none;
+    }
 
     .bg-container {
       width: 100%;
@@ -73,7 +84,10 @@
     .line-title,
     .line-title u {
       width: 100%;
-      font-size: .55rem;
+      font-size: .9rem;
+      @media (min-width: 768px) {
+        font-size: .55rem;
+      }
       text-align: center;
       margin-bottom: 0;
     }
