@@ -24,18 +24,18 @@ const HomeComponent = () => {
       <main className="container">
         <div className="row container__title">
           <div className="col-12">
-            <p>Celebración Día del Niño<br />2020 Negocio Cárnico</p>
+            <p className="mt-4 mt-md-3">Celebración Día del Niño<br />2020 Negocio Cárnico</p>
           </div>
         </div>
 
         <div className="row container__body">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div className="container__body__left">
               <img src={ueColour} alt="UE" />
             </div>
           </div>
 
-          <div className="col-4 offset-1">
+          <div className="col-12 col-md-4 offset-md-1">
             <div className="container__body__right">
               <img src={ueWhite} alt="Parque Explora" />
               
