@@ -11,8 +11,7 @@ import ueRed from "./img/logo-explora-red.png";
 import lineWhite from "./img/line-white.png";
 import vidImg from "./img/dinos-vid.png";
 import dinoImg from "./img/dinos-class.png";
-import dinoImg2 from "./img/dino-doll.jpg";
-
+import dinoImg2 from "./img/dino-doll.png";
 
 import './sass/dino.scss';
 
@@ -137,7 +136,7 @@ const DinoComponent = () => {
                 millones de años."
                 cssClass=" first"
                 onClickFunc={() => setModalVideoShow(true)}
-                cssTitle="mb-2"
+                cssTitle="my-2 text-center"
                 cssImg="dino-img"
                 cssText="dino-text"
               />
@@ -152,6 +151,7 @@ const DinoComponent = () => {
                 text="Gracias a los fósiles, nos hemos imaginado todo tipo de historias fantásticas. Con los saurios, un grupo de reptiles ya extinto, la paleontología
                 nos indica que estos fósiles eran los restos de un Pliosaurio, un enorme reptil acuático. Conoce mas de estas criaturas y moldea un dinosaurio en papel origami."
                 cssClass=" second"
+                cssText="dino-text mt-3"
               />
 
               <p className="line-title">
@@ -227,6 +227,7 @@ const DinoComponent = () => {
                 text="Los dinosaurios pueden ser grandes como un edificio o tan pequeños como un perro, de cuello largo,
                 con cuernos, de fauces gigantes o cubiertos de espinas, son tan diversos como la vida. Conoce más de ellos mientras moldeamos uno en plastilina."
                 cssClass=" second"
+                cssText="dino-text mt-3"
               />
 
               <p className="line-title">

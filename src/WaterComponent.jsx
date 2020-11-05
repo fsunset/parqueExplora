@@ -135,7 +135,7 @@ const WaterComponent = () => {
                 text="Lo puedes conocer como Nemo, este colorido y particular pez habita en el 
                 Oriente de los océanos Índico y Pacífico Occidental. Moldea un pez payaso en este taller mientras nos sumergimos en su historia."
                 onClickFunc={() => setModalVideoShow(true)}
-                cssTitle="mb-2"
+                cssTitle="mb-2 pl-2"
                 cssImg="water-img"
                 cssText="water-text"
               />
