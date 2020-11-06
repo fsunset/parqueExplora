@@ -73,7 +73,7 @@ const ExploreComponent = () => {
     <div className="main__explore">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__explore-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -82,21 +82,27 @@ const ExploreComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__explore-title">
-              <p>Explora<br/>y Experimenta</p>
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__explore-title d-none d-md-block">
+              <p>Explora <br />y Experimenta</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__explore-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
+            </div>
+          </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__explore-title">
+              <p>Explora <br />y Experimenta</p>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title="TALLER DE EXPERIMENTACIÓN FÍSICA"
@@ -140,14 +146,14 @@ const ExploreComponent = () => {
             </div>
           </div>
           
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="Taller magia y ciencia"
                 image={exploreImg2}
                 text="Somos lo que percibimos… los magos conocen muy bien como funcionan nuestros sentidos para engañarnos y distorsionar la realidad.
                 Te invitamos a nuestro taller “Magia en Casa”, donde aprenderás con materiales caseros y conocerás como conectamos la magia y la ciencia."
-                cssTitle=" text-center"
+                cssTitle="text-center my-2 my-md-0"
                 cssImg="explore-img-xsmall"
                 cssText="explore-text my-1 explore-text-small"
                 cssClass=" closer-left"
@@ -177,7 +183,7 @@ const ExploreComponent = () => {
                 En esta charla hablaremos de los disfraces a los que recurren los animales para sobrevivir, comer o atraerse entre sí."
                 cssText="explore-text my-1 explore-text-small"
                 cssImg="explore-img-xsmall"
-                cssTitle=" text-center"
+                cssTitle="text-center my-2 my-md-0"
                 cssClass=" closer-left"
               />
 
@@ -200,7 +206,7 @@ const ExploreComponent = () => {
             </div>
           </div>
 
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="TALLER DE química y magia"
@@ -208,7 +214,7 @@ const ExploreComponent = () => {
                 text="Ven con nosotros a descubrir el universo de las reacciones químicas y te enseñaremos algunos trucos:
                 ¿Cómo inflar un globo mezclando dos sustancias de la cocina?"
                 cssText="explore-text my-1 explore-text-small"
-                cssTitle=" text-center"
+                cssTitle="text-center my-2 my-md-0"
                 cssImg="explore-img-xsmall"
                 cssClass=" closer-left"
               />
@@ -247,8 +253,8 @@ const ExploreComponent = () => {
                 image={exploreImg5}
                 text="Experimentamos con la química y la física para ver fenómenos únicos de la ciencia, maravíllate con estos trucos."
                 cssText="explore-text my-1 explore-text-small"
-                cssImg="explore-img-xsmall"
-                cssTitle=" text-center"
+                cssImg="explore-img-xsmall pl-3 my-2"
+                cssTitle="text-center my-2 my-md-0"
               />
 
               <div className="hours">
@@ -270,7 +276,7 @@ const ExploreComponent = () => {
             </div>
           </div>
 
-          <div className="col-3 folder-container">
+          <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="ACTIVIDAD EXPERIMENTAL"
@@ -278,8 +284,8 @@ const ExploreComponent = () => {
                 text="Hacemos cosas, cada uno a nuestro ritmo. Creamos, construimos, jugamos. Solos y con el otro.
                 Hacemos para nosotros, también para compartir. En la mínima acción de vivir nos relacionamos con el mundo."
                 cssText="explore-text my-1 explore-text-small"
-                cssTitle=" text-center"
-                cssImg="explore-img-small"
+                cssTitle="text-center my-2 my-md-0"
+                cssImg="explore-img-small pl-3 my-2"
               />
 
               <div className="hours">
@@ -293,7 +299,7 @@ const ExploreComponent = () => {
                 image={exploreImg7}
                 text="Interactúa con Experiencias de Parque Explora desde la comodidad de tu casa."
                 cssText="explore-text my-1 explore-text-small"
-                cssImg="explore-img-small"
+                cssImg="explore-img-small pl-3 my-2"
               />
 
               <div className="hours">

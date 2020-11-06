@@ -102,7 +102,7 @@ const DinoComponent = () => {
     <div className="main__dino">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__dino-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -111,21 +111,27 @@ const DinoComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__dino-title">
-              <p>Explora <br />DINOSAURIOS</p>
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__dino-title d-none d-md-block">
+              <p>Explora <br />dinosaurios</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__dino-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
+            </div>
+          </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__dino-title">
+              <p>Explora <br />dinosaurios</p>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-4 folder-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
             <div className="bg-container pt-4">
               <CardComponent
                 title="Recorrido dinosaurios"
@@ -143,10 +149,10 @@ const DinoComponent = () => {
             </div>
           </div>
           
-          <div className="col-4 folder-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
-                title="DINOSAURIOS EN ORIGAMI"
+                title="Dinosaurios en Origami"
                 image={dinoImg}
                 text="Gracias a los fósiles, nos hemos imaginado todo tipo de historias fantásticas. Con los saurios, un grupo de reptiles ya extinto, la paleontología
                 nos indica que estos fósiles eran los restos de un Pliosaurio, un enorme reptil acuático. Conoce mas de estas criaturas y moldea un dinosaurio en papel origami."
@@ -166,7 +172,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: "https://zoom.us/j/98120670055?pwd=bFdNR1NMU3RKOVowdm5FOUV6bVVldz09",
                         courseCode: 1,
-                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseName: "Dinosaurios en Origami",
                         courseTime: "10am - 11am",
                       });
                       setModalClassShow(true);
@@ -179,7 +185,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: "https://zoom.us/j/92157201953?pwd=UlgvVFEreUd3bCt4TkwyNzIvNWlCZz09",
                         courseCode: 1,
-                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseName: "Dinosaurios en Origami",
                         courseTime: "3pm - 4pm",
                       });
                       setModalClassShow(true);
@@ -195,7 +201,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: "https://zoom.us/j/95500988319?pwd=QTNFcm83SnJrSFc4bUlkY1BQN3VMdz09",
                         courseCode: 2,
-                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseName: "Dinosaurios en Origami",
                         courseTime: "10am - 11am",
                       });
                       setModalClassShow(true);
@@ -208,7 +214,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: "https://zoom.us/j/92780349604?pwd=S1VQTzFxMERJd2ZoRjBKL2NUZGladz09",
                         courseCode: 2,
-                        courseName: "DINOSAURIOS EN ORIGAMI",
+                        courseName: "Dinosaurios en Origami",
                         courseTime: "3pm - 4pm",
                       });
                       setModalClassShow(true);
@@ -219,10 +225,10 @@ const DinoComponent = () => {
             </div>
           </div>
 
-          <div className="col-4 folder-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
-                title="Dinosaurios en plastilina"
+                title="Dinosaurios en Plastilina"
                 image={dinoImg2}
                 text="Los dinosaurios pueden ser grandes como un edificio o tan pequeños como un perro, de cuello largo,
                 con cuernos, de fauces gigantes o cubiertos de espinas, son tan diversos como la vida. Conoce más de ellos mientras moldeamos uno en plastilina."
@@ -241,7 +247,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: " https://zoom.us/j/96979010972",
                         courseCode: 0,
-                        courseName: "Dinosaurios en plastilina",
+                        courseName: "Dinosaurios en Plastilina",
                         courseTime: "11am - 12pm",
                       });
                       setModalClassShow(true);
@@ -254,7 +260,7 @@ const DinoComponent = () => {
                       setActiveCourse({
                         courseLink: "https://zoom.us/j/98556103501",
                         courseCode: 0,
-                        courseName: "Dinosaurios en plastilina",
+                        courseName: "Dinosaurios en Plastilina",
                         courseTime: "4pm - 5pm",
                       });
                       setModalClassShow(true);

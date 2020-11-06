@@ -293,12 +293,14 @@ const WaterComponent = () => {
                 text="Recorre junto a nuestros exploradores el Acuario de Parque Explora, sumérgete en las aguas entre peces y plantas."
                 cssClass=" first"
                 onClickFunc={() => setModalVideoShow(true)}
+                cssTitle="text-center"
               />
 
               <CardComponent
                 title="Ranas de origami"
                 image={waterImg4}
                 text="En este taller aprenderemos a crear ranas en origami, conociendo sobre esta increíble especie y su naturaleza."
+                cssTitle="text-center"
               />
 
               <div className="hours">

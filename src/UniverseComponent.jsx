@@ -103,7 +103,7 @@ const UniverseComponent = () => {
     <div className="main__universe">
       <main className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-5 col-md-2">
             <div
               className="main__universe-back pt-5"
               onClick={() => {history.push("/mapa")}}
@@ -112,28 +112,35 @@ const UniverseComponent = () => {
             </div>
           </div>
 
-          <div className="col-7 text-center">
-            <div className="main__universe-title">
-              <p>Explora el <br />Universo</p>
+          <div className="col-1 col-md-7 text-center">
+            <div className="main__universe-title d-none d-md-block">
+              <p>Explora <br />el universo</p>
             </div>
           </div>
 
-          <div className="col-3">
+          <div className="col-5 col-md-3">
             <div className="main__universe-sponsor pt-5">
               <img src={logoZenu} alt="Zenú" />
+            </div>
+          </div>
+          
+          <div className="col-12 text-center d-block d-md-none">
+            <div className="main__universe-title">
+              <p>Explora <br />el universo</p>
             </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-4 folder-container">
-            <div className="bg-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
+            <div className="bg-container bigger-mobile">
               <CardComponent
                 title="VIAJE POR LA VÍA LÁCTEA"
                 image={milkyWayImg}
                 text="Vía Láctea, un viaje por la galaxia y a través del sistema solar para describir las maravillas del universo."
                 cssClass=" first"
                 onClickFunc={() => setModalVideoShow(true)}
+                cssTitle="pt-4 pt-md-0 mb-2 mb-md-0"
               />
 
               <CardComponent
@@ -181,7 +188,7 @@ const UniverseComponent = () => {
             </div>
           </div>
           
-          <div className="col-4 folder-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="HAGAMOS ASTRONAUTAS EN PLASTILINA"
@@ -256,7 +263,7 @@ const UniverseComponent = () => {
             </div>
           </div>
 
-          <div className="col-4 folder-container">
+          <div className="col-10 offset-1 col-md-4 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
                 title="TALLERES PREPARANDO ASTEROIDES"
