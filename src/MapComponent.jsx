@@ -9,7 +9,7 @@ const MapComponent = () => {
     <div className="main__map">
       {/* WhatsApp Contact Button */}
       <a
-        href={`https://api.whatsapp.com/send/?phone=573152521451&text=Hola%2C+estoy+navegando+el+universo+explora&app_absent=0`}
+        href={`https://api.whatsapp.com/send/?phone=573203634235&text=Hola%2C+estoy+navegando+el+universo+explora&app_absent=0`}
         className="whatsapp__btn"
         target="_blank"
         rel="noreferrer"
