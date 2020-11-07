@@ -4,7 +4,6 @@ import {
   Route,
 } from "react-router-dom";
 import NewRelic from 'new-relic-agent-react'
-
 import HomeComponent from "./HomeComponent";
 import MapComponent from "./MapComponent";
 import UniverseComponent from "./UniverseComponent";
@@ -16,13 +15,9 @@ import InfoComponent from "./InfoComponent";
 import ExploreComponent from "./ExploreComponent";
 import './sass/home.scss';
 
-// Google Analytics
-import ReactGA from "react-ga";
-ReactGA.initialize("UA-169941119-1");
-
 const App = () => {
-  // Analize active-users in real-time
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  
+
   
   return (
     <Router>
