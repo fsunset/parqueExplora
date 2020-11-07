@@ -3,6 +3,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import NewRelic from 'new-relic-agent-react'
+
 import HomeComponent from "./HomeComponent";
 import MapComponent from "./MapComponent";
 import UniverseComponent from "./UniverseComponent";
@@ -18,6 +20,10 @@ import './sass/home.scss';
 const App = () => {
   return (
     <Router>
+      {/* Dashboard for app performance */}
+      <NewRelic licenseKey="dfde4c503b072c99bc03cb2d242d7890631aNRAL" applicationID="parqueExploraLoadTest" />
+
+
       <Switch>
         <Route path="/explora-y-experimenta">
           <ExploreComponent />

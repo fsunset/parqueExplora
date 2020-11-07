@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Firebase from './firebaseConfig';
 import { useHistory } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -32,7 +32,38 @@ const WaterComponent = () => {
     courseName: "",
     courseTime: "",
     courseLink: "",
+    courseSits: 0,
   });
+  let courseInscriptions = [];
+
+  console.log("activeCourse-->")
+  console.log(activeCourse)
+
+  const registerToCourseHandler = () => {
+    setTimeout(() => {
+      console.log("second LOG -->")
+      console.log(activeCourse)
+      db.collection("users")
+        .where("courseName", "==", activeCourse.courseName)
+        .where("courseTime", "==", activeCourse.courseTime)
+      .get()
+      .then(function(querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          courseInscriptions.push(doc.id);
+        });
+
+        setActiveCourse({...activeCourse, courseSits: activeCourse.courseSits - courseInscriptions})
+
+        console.log("courseInscriptions length-->")
+        console.log(courseInscriptions.length)
+      })
+      .catch(function(error) {
+          console.log("Error getting documents: ", error);
+      });
+    }, 2555);
+
+    setShowConfirmationMsg(false);
+  }
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -160,9 +191,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "11am - 12pm",
+                        courseSits: 100,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >11am - 12pm</span>
@@ -174,9 +206,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "12pm - 1pm",
+                        courseSits: 50,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >12pm - 1pm</span>
@@ -189,9 +222,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "4pm - 5pm",
+                        courseSits: 100,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >4pm - 5pm</span>
@@ -222,9 +256,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "taller Dibujo de pirañas",
                         courseTime: "9am - 10am",
+                        courseSits: 100,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >9am - 10am</span>
@@ -236,9 +271,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "taller Dibujo de pirañas",
                         courseTime: "2pm - 3pm",
+                        courseSits: 100,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >2pm - 3pm</span>
@@ -269,9 +305,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "navegación por Amazonas",
                         courseTime: "9am - 10am",
+                        courseSits: 150,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >9am - 10am</span>
@@ -283,9 +320,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "navegación por Amazonas",
                         courseTime: "2pm - 3pm",
+                        courseSits: 150,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >2pm - 3pm</span>
@@ -321,9 +359,10 @@ const WaterComponent = () => {
                         courseCode: 0,
                         courseName: "Ranas de origami",
                         courseTime: "4pm - 5pm",
+                        courseSits: 50,
                       });
                       setModalClassShow(true);
-                      setShowConfirmationMsg(false);
+                      registerToCourseHandler();
                     }
                   }
                 >4pm - 5pm</span>
@@ -365,7 +404,9 @@ const WaterComponent = () => {
             </div>
           ) : (
             <>
-              <h1>INSCRÍBETE AL CURSO</h1>
+                <h1>INSCRÍBETE AL CURSO</h1>
+                <h4 className="subs pl-3 pr-3">{activeCourse.courseName}</h4>
+                <h4 className="subs pl-3 pr-3"><p>Cupos restantes: {activeCourse.courseSits}</p></h4>
                 
               <Form className="p-4" onSubmit={e => formSubmitHandler(e)}>
                 <Form.Group>

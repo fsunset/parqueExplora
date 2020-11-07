@@ -37,7 +37,21 @@ img {
 }
 
 // Globals
-.modal-class-body .bottom img {
-  max-width: 150px !important;
-  margin: 20px 0 25px !important;
+.modal-class-body {
+  .bottom img {
+    max-width: 150px !important;
+    margin: 20px 0 25px !important;
+  }
+
+  .subs {
+    font-family: "avenirSemiBold";
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $black;
+
+    p {
+      color: $black;
+      font-size: .8rem;
+    }
+  }
 }

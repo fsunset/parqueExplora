@@ -1,7 +1,4 @@
 import { useHistory } from "react-router-dom";
-import {
-  WhatsappShareButton,
-} from "react-share";
 import whatsAppImg from './img/whatsApp.png';
 import './sass/map.scss';
 
