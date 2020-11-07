@@ -14,10 +14,16 @@ import CookingComponent from "./CookingComponent";
 import TheatreComponent from "./TheatreComponent";
 import InfoComponent from "./InfoComponent";
 import ExploreComponent from "./ExploreComponent";
-
 import './sass/home.scss';
 
+// Google Analytics
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-169941119-1");
+
 const App = () => {
+  // Analize active-users in real-time
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  
   return (
     <Router>
       {/* Dashboard for app performance */}
