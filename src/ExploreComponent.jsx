@@ -7,6 +7,7 @@ import { Modal } from "react-bootstrap";
 import backImg from "./img/btn-back.png";
 import logoZenu from "./img/logo-zenu.png";
 import ueWhite from "./img/logo-explora-white.png";
+import ueRed from "./img/logo-explora-red.png";
 import exploreImg1 from "./img/img-explore-1.jpg";
 import exploreImg2 from "./img/img-explore-2.jpg";
 import exploreImg3 from "./img/img-explore-3.jpg";
@@ -29,12 +30,12 @@ const ExploreComponent = () => {
 
   let history = useHistory();
   const [modalClassShow, setModalClassShow] = useState(false);
+  const [showConfirmationMsg, setShowConfirmationMsg] = useState(false);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    setModalClassShow(false);
 
     // Saving info Firebase DB
     db.collection("users").add({
@@ -63,7 +64,8 @@ const ExploreComponent = () => {
           "courseLink": activeCourse.courseLink,
         }
       )
-    });
+    })
+      .then(setShowConfirmationMsg(true));
     
     setUserName("")
     setUserEmail("")
@@ -126,6 +128,7 @@ const ExploreComponent = () => {
                         courseTime: "10am - 11am",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >10am - 11am</span>
@@ -139,6 +142,7 @@ const ExploreComponent = () => {
                         courseTime: "3pm - 4pm",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >3pm - 4pm</span>
@@ -171,6 +175,7 @@ const ExploreComponent = () => {
                         courseTime: "9am - 10am",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >9am - 10am</span>
@@ -199,6 +204,7 @@ const ExploreComponent = () => {
                         courseTime: "11am - 12pm",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >11am - 12pm</span>
@@ -230,6 +236,7 @@ const ExploreComponent = () => {
                         courseTime: "12pm - 1pm",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >12pm - 1pm</span>
@@ -243,6 +250,7 @@ const ExploreComponent = () => {
                         courseTime: "5pm - 6pm",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >5pm - 6pm</span>
@@ -269,6 +277,7 @@ const ExploreComponent = () => {
                         courseTime: "2pm - 3pm",
                       });
                       setModalClassShow(true);
+                      setShowConfirmationMsg(false);
                     }
                   }
                 >2pm - 3pm</span>
@@ -327,23 +336,40 @@ const ExploreComponent = () => {
         centered
       >
         <Modal.Body className="p-0 modal-class-body text-center">
-          <h1>INSCRÍBETE AL CURSO</h1>
+          {!!showConfirmationMsg ? (
+            <div className="row">
+              <div className="col-12">
+                <p className="p-4">
+                  Revisa tu correo electrónico, te enviamos un link con la información de la inscripción a tu curso,
+                  si quieres entrar a tu clase directamente haz <a href={activeCourse.courseLink} target="_blank" rel="noreferrer">clic aquí</a>
+                </p>
+              </div>
+            </div>
+          ) : (
+            <>
+              <h1>INSCRÍBETE AL CURSO</h1>
+                
+              <Form className="p-4" onSubmit={e => formSubmitHandler(e)}>
+                <Form.Group>
+                  <Form.Label>Nombre Completo</Form.Label>
+                  <Form.Control type="text" required value={userName} onChange={e => setUserName(e.target.value)} />
+                </Form.Group>
 
-          <Form className="p-4" onSubmit={e => formSubmitHandler(e)}>
-            <Form.Group>
-              <Form.Label>Nombre Completo</Form.Label>
-              <Form.Control type="text" required value={userName} onChange={e => setUserName(e.target.value)} />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Correo Electrónico</Form.Label>
+                  <Form.Control type="email" required value={userEmail} onChange={e => setUserEmail(e.target.value)} />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Correo Electrónico</Form.Label>
-              <Form.Control type="email" required value={userEmail} onChange={e => setUserEmail(e.target.value)} />
-            </Form.Group>
+                <Button variant="primary" type="submit">
+                  Enviar
+                </Button>
+              </Form>
+            </>
+          )}
 
-            <Button variant="primary" type="submit">
-              Enviar
-            </Button>
-          </Form>
+          <div className="bottom">
+            <img src={ueRed} alt="Explora" />
+          </div>
         </Modal.Body>
       </Modal>
     </div>
