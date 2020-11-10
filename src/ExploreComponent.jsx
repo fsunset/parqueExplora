@@ -164,21 +164,35 @@ const ExploreComponent = () => {
               />
 
               <div className="hours">
-                <strong>Inscríbete aquí</strong>
                 <span
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/98873643852",
+                        courseLink: "https://zoom.us/j/98772552321",
                         courseCode: 0,
                         courseName: "Taller magia y ciencia",
-                        courseTime: "9am - 10am",
+                        courseTime: "10am - 11am",
                       });
                       setModalClassShow(true);
                       setShowConfirmationMsg(false);
                     }
                   }
-                >9am - 10am</span>
+                >10am - 11am</span>
+              
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/93857929692",
+                        courseCode: 0,
+                        courseName: "Taller magia y ciencia",
+                        courseTime: "3pm - 4pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >3pm - 4pm</span>
               </div>
 
               <CardComponent
@@ -230,7 +244,7 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/92418966070",
+                        courseLink: "https://zoom.us/j/91537263185",
                         courseCode: 0,
                         courseName: "TALLER DE química y magia",
                         courseTime: "12pm - 1pm",
@@ -271,16 +285,16 @@ const ExploreComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/99363862997?pwd=RWN4MDJhdUhBYll4ak9PUlo1a0lDQT09",
+                        courseLink: "https://zoom.us/j/97935819951",
                         courseCode: 0,
                         courseName: "Taller de experimentación química",
-                        courseTime: "2pm - 3pm",
+                        courseTime: "3pm - 4pm",
                       });
                       setModalClassShow(true);
                       setShowConfirmationMsg(false);
                     }
                   }
-                >2pm - 3pm</span>
+                >3pm - 4pm</span>
               </div>
             </div>
           </div>

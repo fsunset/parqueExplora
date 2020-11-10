@@ -159,33 +159,50 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/98559538968",
+                        courseLink: "https://zoom.us/j/93659817840",
                         courseCode: 0,
                         courseName: "Navegación por el Universo",
-                        courseTime: "10am - 11am",
+                        courseTime: "9am - 10am",
                       });
                       setModalClassShow(true);
                       setShowConfirmationMsg(false);
                     }
                   }
                 >
-                  10am - 11am
+                  9am - 10am
                 </span>
                 <span
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/93769047683",
+                        courseLink: "https://zoom.us/j/92457537723",
                         courseCode: 0,
                         courseName: "Navegación por el Universo",
-                        courseTime: "5pm - 6pm",
+                        courseTime: "2pm - 3pm",
                       });
                       setModalClassShow(true);
                       setShowConfirmationMsg(false);
                     }
                   }
                 >
-                  5pm - 6pm
+                  2pm - 3pm
+                </span>
+                <br />
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/95079800867",
+                        courseCode: 0,
+                        courseName: "Navegación por el Universo",
+                        courseTime: "4pm - 5pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >
+                  4pm - 5pm
                 </span>
               </div>
             </div>
@@ -225,7 +242,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/95688787812?pwd=RDZ1akdxNDgwNU5BK2FhZFRFMWhRZz09",
+                        courseLink: "https://zoom.us/j/99304409597",
                         courseCode: 1,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "2pm - 3pm",
@@ -304,7 +321,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/97555520710?pwd=cGN4VmN0R3k0RnR5amFSSCt1eWRTUT09",
+                        courseLink: "https://zoom.us/j/91669893944",
                         courseCode: 1,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "4pm - 5pm",

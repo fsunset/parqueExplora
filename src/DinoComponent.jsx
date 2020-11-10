@@ -185,7 +185,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/92157201953?pwd=UlgvVFEreUd3bCt4TkwyNzIvNWlCZz09",
+                        courseLink: "https://zoom.us/j/92780349604?pwd=S1VQTzFxMERJd2ZoRjBKL2NUZGladz09",
                         courseCode: 1,
                         courseName: "Dinosaurios en Origami",
                         courseTime: "3pm - 4pm",
@@ -250,7 +250,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: " https://zoom.us/j/96979010972",
+                        courseLink: "https://zoom.us/j/96979010972",
                         courseCode: 0,
                         courseName: "Dinosaurios en Plastilina",
                         courseTime: "11am - 12pm",

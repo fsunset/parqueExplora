@@ -195,6 +195,20 @@ const WaterComponent = () => {
                     }
                   }
                 >4pm - 5pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/93323472808",
+                        courseCode: 0,
+                        courseName: "Peces payaso en plastilina",
+                        courseTime: "5pm - 6pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >5pm - 6pm</span>
               </div>
             </div>
           </div>
@@ -305,28 +319,77 @@ const WaterComponent = () => {
               />
 
               <CardComponent
-                title="Ranas de origami"
+                title="Tiburones en Plastilina"
                 image={waterImg4}
-                text="En este taller aprenderemos a crear ranas en origami, conociendo sobre esta increíble especie y su naturaleza."
+                text="Son unas criaturas fascinantes, reemplazan dientes fácilmente, tan antiguos como los dinosaurios y tienen un olfato poderoso: ¡Los poderosos tiburones!"
                 cssTitle="text-center"
+                cssImg="water-img mb-0"
+                cssText="mb-0"
               />
 
               <div className="hours">
-                <strong>Inscríbete aquí</strong>
+                <strong>Clase 1:</strong>
                 <span
+                  className="mb-0"
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/94957174564",
-                        courseCode: 0,
-                        courseName: "Ranas de origami",
-                        courseTime: "4pm - 5pm",
+                        courseLink: "https://zoom.us/j/97350533325",
+                        courseCode: 1,
+                        courseName: "Tiburones en Plastilina",
+                        courseTime: "12pm - 1pm",
                       });
                       setModalClassShow(true);
                       setShowConfirmationMsg(false);
                     }
                   }
-                >4pm - 5pm</span>
+                >12pm - 1pm</span>
+                <span
+                  className="mb-0"
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/91061941560",
+                        courseCode: 1,
+                        courseName: "Tiburones en Plastilina",
+                        courseTime: "5pm - 6pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >5pm - 6pm</span>
+              </div>
+              <div className="hours">
+                <strong>Clase 2:</strong>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/95420354361",
+                        courseCode: 2,
+                        courseName: "Tiburones en Plastilina",
+                        courseTime: "12pm - 1pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >12pm - 1pm</span>
+                <span
+                  onClick={
+                    () => {
+                      setActiveCourse({
+                        courseLink: "https://zoom.us/j/91710557663",
+                        courseCode: 2,
+                        courseName: "Tiburones en Plastilina",
+                        courseTime: "5pm - 6pm",
+                      });
+                      setModalClassShow(true);
+                      setShowConfirmationMsg(false);
+                    }
+                  }
+                >5pm - 6pm</span>
               </div>
             </div>
           </div>
