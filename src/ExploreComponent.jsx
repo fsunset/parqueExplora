@@ -150,6 +150,7 @@ const ExploreComponent = () => {
             </div>
           </div>
           
+          
           <div className="col-10 offset-1 col-md-3 offset-md-0 folder-container">
             <div className="bg-container">
               <CardComponent
