@@ -171,7 +171,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/98120670055?pwd=bFdNR1NMU3RKOVowdm5FOUV6bVVldz09",
+                        courseLink: "https://zoom.us/j/95500988319?pwd=QTNFcm83SnJrSFc4bUlkY1BQN3VMdz09",
                         courseCode: 1,
                         courseName: "Dinosaurios en Origami",
                         courseTime: "10am - 11am",
@@ -185,7 +185,7 @@ const DinoComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/92780349604?pwd=S1VQTzFxMERJd2ZoRjBKL2NUZGladz09",
+                        courseLink: "https://zoom.us/j/92157201953?pwd=UlgvVFEreUd3bCt4TkwyNzIvNWlCZz09",
                         courseCode: 1,
                         courseName: "Dinosaurios en Origami",
                         courseTime: "3pm - 4pm",

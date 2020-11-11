@@ -273,7 +273,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/99304409597",
+                        courseLink: "https://zoom.us/j/95688787812",
                         courseCode: 2,
                         courseName: "HAGAMOS ASTRONAUTAS EN PLASTILINA",
                         courseTime: "2pm - 3pm",
@@ -321,7 +321,7 @@ const UniverseComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/91669893944",
+                        courseLink: "https://zoom.us/j/97555520710?pwd=cGN4VmN0R3k0RnR5amFSSCt1eWRTUT09",
                         courseCode: 1,
                         courseName: "TALLERES PREPARANDO ASTEROIDES",
                         courseTime: "4pm - 5pm",

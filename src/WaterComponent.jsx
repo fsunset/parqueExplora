@@ -185,7 +185,7 @@ const WaterComponent = () => {
                   onClick={
                     () => {
                       setActiveCourse({
-                        courseLink: "https://zoom.us/j/91503520593",
+                        courseLink: "https://zoom.us/j/96746460702",
                         courseCode: 0,
                         courseName: "Peces payaso en plastilina",
                         courseTime: "4pm - 5pm",
